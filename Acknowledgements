@@ -1,0 +1,92 @@
+#Acknowledgements
+OpenCV
+TensorFlow
+Raspberry Pi Foundation
+FLIR Systems
+Copy code
+.gitignore
+
+plaintext
+Copy code
+__pycache__/
+*.pyc
+.env
+requirements.txt
+
+plaintext
+Copy code
+Flask
+OpenCV-Python
+TensorFlow
+app.py
+
+python
+Copy code
+from flask import Flask, render_template
+import utils.camera as camera
+import utils.thermal as thermal
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
+config/config.py
+
+python
+Copy code
+import os
+
+class Config:
+    SECRET_KEY = os.getenv('SECRET_KEY', 'your_secret_key')
+    DEBUG = os.getenv('DEBUG', True)
+utils/camera.py
+
+python
+Copy code
+import cv2
+
+def capture_image():
+    # Implement camera capture logic here
+    pass
+utils/thermal.py
+
+python
+Copy code
+def read_temperature():
+    # Implement thermal reading logic here
+    pass
+utils/face_recognition.py
+
+python
+Copy code
+def recognize_face():
+    # Implement facial recognition logic here
+    pass
+templates/index.html
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Door Camera</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Welcome to Smart Door Camera</h1>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
+Push the Code to GitHub
+
+bash
+Copy code
+git add .
+git commit -m "Initial commit"
+git push origin main
