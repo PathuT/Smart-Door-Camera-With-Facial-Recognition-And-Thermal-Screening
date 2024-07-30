@@ -3,25 +3,25 @@ OpenCV
 TensorFlow
 Raspberry Pi Foundation
 FLIR Systems
-Copy code
+
 .gitignore
 
 plaintext
-Copy code
+
 __pycache__/
 *.pyc
 .env
 requirements.txt
 
 plaintext
-Copy code
+
 Flask
 OpenCV-Python
 TensorFlow
 app.py
 
 python
-Copy code
+
 from flask import Flask, render_template
 import utils.camera as camera
 import utils.thermal as thermal
@@ -37,7 +37,7 @@ if __name__ == '__main__':
 config/config.py
 
 python
-Copy code
+
 import os
 
 class Config:
@@ -46,7 +46,7 @@ class Config:
 utils/camera.py
 
 python
-Copy code
+
 import cv2
 
 def capture_image():
@@ -55,21 +55,21 @@ def capture_image():
 utils/thermal.py
 
 python
-Copy code
+
 def read_temperature():
     # Implement thermal reading logic here
     pass
 utils/face_recognition.py
 
 python
-Copy code
+
 def recognize_face():
     # Implement facial recognition logic here
     pass
 templates/index.html
 
 html
-Copy code
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +86,7 @@ Copy code
 Push the Code to GitHub
 
 bash
-Copy code
+
 git add .
 git commit -m "Initial commit"
 git push origin main
